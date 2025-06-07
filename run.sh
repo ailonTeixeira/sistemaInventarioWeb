@@ -47,7 +47,7 @@ echo "🧪 Executando testes automatizados..."
 echo "====================================================="
 
 # 5. Execução dos testes
-pytest
+pytest -v
 if [ $? -ne 0 ]; then
     echo "⚠️ Atenção: Um ou mais testes falharam. Verifique o output acima."
     # exit 1 

@@ -10,10 +10,14 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('web.index') }}">📦 Inventário IARTES</a>
+            <a class="navbar-brand" href="{{ url_for('web.index') }}">📦 Inventário Corp</a>
+            <div class="d-flex">
+                <a href="{{ url_for('web.logout') }}" class="btn btn-outline-light">
+                    <i class="bi bi-box-arrow-right"></i> Sair
+                </a>
+            </div>
         </div>
-    </nav>
-        
+    </nav> 
     <main class="container mt-4">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -29,17 +33,6 @@
         {% block content %}{% endblock %}
     </main>
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url_for('web.index') }}">📦 Inventário Corp</a>
-            <div class="d-flex">
-                <a href="{{ url_for('web.logout') }}" class="btn btn-outline-light">
-                    <i class="bi bi-box-arrow-right"></i> Sair
-                </a>
-            </div>
-        </div>
-    </nav>
     <footer class="text-center text-muted py-4 mt-4 bg-light">
         <p>© 2025 - Sistema de Gerenciamento de Inventário</p>
     </footer>
